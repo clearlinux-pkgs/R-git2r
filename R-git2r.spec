@@ -4,7 +4,7 @@
 #
 Name     : R-git2r
 Version  : 0.14.0
-Release  : 13
+Release  : 14
 URL      : http://cran.r-project.org/src/contrib/git2r_0.14.0.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/git2r_0.14.0.tar.gz
 Summary  : Provides Access to Git Repositories
