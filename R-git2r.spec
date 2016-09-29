@@ -4,7 +4,7 @@
 #
 Name     : R-git2r
 Version  : 0.15.0
-Release  : 21
+Release  : 22
 URL      : http://cran.r-project.org/src/contrib/git2r_0.15.0.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/git2r_0.15.0.tar.gz
 Summary  : Provides Access to Git Repositories
@@ -14,6 +14,10 @@ Requires: R-git2r-lib
 BuildRequires : clr-R-helpers
 BuildRequires : curl-dev
 BuildRequires : git
+BuildRequires : libgit2-dev
+BuildRequires : libidn-dev
+BuildRequires : libssh2-dev
+BuildRequires : nghttp2-dev
 BuildRequires : openssl-dev
 BuildRequires : pkgconfig(libssl)
 BuildRequires : zlib-dev
@@ -33,6 +37,7 @@ lib components for the R-git2r package.
 %setup -q -c -n git2r
 
 %build
+export LANG=C
 
 %install
 rm -rf %{buildroot}
@@ -48,6 +53,7 @@ mkdir -p %{buildroot}/usr/lib64/R/library
 R CMD INSTALL --install-tests --build  -l %{buildroot}/usr/lib64/R/library git2r
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
+export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost

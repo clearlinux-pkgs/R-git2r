@@ -3,3 +3,8 @@
 zlib-dev
 openssl-dev
 git
+libgit2-dev
+libssh2-dev
+curl-dev
+nghttp2-dev
+libidn-dev
