@@ -4,7 +4,7 @@
 #
 Name     : R-git2r
 Version  : 0.18.0
-Release  : 30
+Release  : 31
 URL      : http://cran.r-project.org/src/contrib/git2r_0.18.0.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/git2r_0.18.0.tar.gz
 Summary  : Provides Access to Git Repositories
@@ -38,11 +38,11 @@ lib components for the R-git2r package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1487768715
+export SOURCE_DATE_EPOCH=1488471598
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1487768715
+export SOURCE_DATE_EPOCH=1488471598
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
