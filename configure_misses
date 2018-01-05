@@ -6,3 +6,7 @@ Configure miss: library containing OPENSSL_init_ssl
 Configure miss: struct stat.st_mtimespec
 Configure miss: struct stat.st_mtime_nsec
 Configure miss: qsort_s
+Configure miss: library containing OPENSSL_init_ssl
+Configure miss: struct stat.st_mtimespec
+Configure miss: struct stat.st_mtime_nsec
+Configure miss: qsort_s
