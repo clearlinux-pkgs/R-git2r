@@ -4,14 +4,14 @@
 #
 Name     : R-git2r
 Version  : 0.23.0
-Release  : 62
+Release  : 63
 URL      : https://cran.r-project.org/src/contrib/git2r_0.23.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/git2r_0.23.0.tar.gz
 Summary  : Provides Access to Git Repositories
 Group    : Development/Tools
 License  : GPL-2.0 MIT
-Requires: R-git2r-lib
-BuildRequires : clr-R-helpers
+Requires: R-git2r-lib = %{version}-%{release}
+BuildRequires : buildreq-R
 BuildRequires : curl-dev
 BuildRequires : git
 BuildRequires : libgit2-dev
@@ -45,11 +45,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1531885556
+export SOURCE_DATE_EPOCH=1542430482
 
 %install
+export SOURCE_DATE_EPOCH=1542430482
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1531885556
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
