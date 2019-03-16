@@ -4,7 +4,7 @@
 #
 Name     : R-git2r
 Version  : 0.24.0
-Release  : 68
+Release  : 69
 URL      : https://cran.r-project.org/src/contrib/git2r_0.24.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/git2r_0.24.0.tar.gz
 Summary  : Provides Access to Git Repositories
@@ -45,10 +45,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1546903242
+export SOURCE_DATE_EPOCH=1552762881
 
 %install
-export SOURCE_DATE_EPOCH=1546903242
+export SOURCE_DATE_EPOCH=1552762881
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -84,8 +84,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library git2r|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  git2r || :
 
 
 %files
@@ -114,10 +113,54 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/git2r/help/paths.rds
 /usr/lib64/R/library/git2r/html/00Index.html
 /usr/lib64/R/library/git2r/html/R.css
-/usr/lib64/R/library/git2r/libs/symbols.rds
+/usr/lib64/R/library/git2r/tests/add-force.R
+/usr/lib64/R/library/git2r/tests/bare_repository.R
+/usr/lib64/R/library/git2r/tests/blame.R
+/usr/lib64/R/library/git2r/tests/blob.R
+/usr/lib64/R/library/git2r/tests/branch.R
+/usr/lib64/R/library/git2r/tests/checkout-named-branch.R
+/usr/lib64/R/library/git2r/tests/checkout.R
+/usr/lib64/R/library/git2r/tests/checkout_branch.R
+/usr/lib64/R/library/git2r/tests/checkout_commit.R
+/usr/lib64/R/library/git2r/tests/checkout_tag.R
+/usr/lib64/R/library/git2r/tests/clone_bare.R
+/usr/lib64/R/library/git2r/tests/clone_branch.R
+/usr/lib64/R/library/git2r/tests/clone_checkout.R
+/usr/lib64/R/library/git2r/tests/commit.R
+/usr/lib64/R/library/git2r/tests/config.R
+/usr/lib64/R/library/git2r/tests/diff.R
+/usr/lib64/R/library/git2r/tests/fast_forward_merge.R
+/usr/lib64/R/library/git2r/tests/fetch.R
+/usr/lib64/R/library/git2r/tests/graph.R
+/usr/lib64/R/library/git2r/tests/index.R
+/usr/lib64/R/library/git2r/tests/invalid-conf-var.R
+/usr/lib64/R/library/git2r/tests/libgit2.R
+/usr/lib64/R/library/git2r/tests/merge.R
+/usr/lib64/R/library/git2r/tests/merge_named_branch.R
+/usr/lib64/R/library/git2r/tests/normal_merge.R
+/usr/lib64/R/library/git2r/tests/note.R
+/usr/lib64/R/library/git2r/tests/odb_blobs.R
+/usr/lib64/R/library/git2r/tests/pre-process-path.R
+/usr/lib64/R/library/git2r/tests/pull.R
+/usr/lib64/R/library/git2r/tests/push-force.R
+/usr/lib64/R/library/git2r/tests/push.R
+/usr/lib64/R/library/git2r/tests/reference.R
+/usr/lib64/R/library/git2r/tests/reflog.R
+/usr/lib64/R/library/git2r/tests/refspec.R
+/usr/lib64/R/library/git2r/tests/remotes.R
+/usr/lib64/R/library/git2r/tests/remove.R
+/usr/lib64/R/library/git2r/tests/repository.R
+/usr/lib64/R/library/git2r/tests/reset.R
+/usr/lib64/R/library/git2r/tests/revparse.R
+/usr/lib64/R/library/git2r/tests/signature.R
+/usr/lib64/R/library/git2r/tests/stash.R
+/usr/lib64/R/library/git2r/tests/status.R
+/usr/lib64/R/library/git2r/tests/tag.R
+/usr/lib64/R/library/git2r/tests/time.R
+/usr/lib64/R/library/git2r/tests/tree.R
+/usr/lib64/R/library/git2r/tests/when.R
 
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/R/library/git2r/libs/git2r.so
 /usr/lib64/R/library/git2r/libs/git2r.so.avx2
-/usr/lib64/R/library/git2r/libs/git2r.so.avx512
