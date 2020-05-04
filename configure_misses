@@ -1,6 +1,3 @@
-Configure miss: /Builds/CRAN-QA-Simon
-Configure miss: /Volumes/SSD-Data/Builds
-Configure miss: /Builds/CRAN-QA-Simon
-Configure miss: /Volumes/SSD-Data/Builds
-Configure miss: /Builds/CRAN-QA-Simon
-Configure miss: /Volumes/SSD-Data/Builds
+Configure miss: whether the libgit2 function git_oid_is_zero is available
+Configure miss: whether the libgit2 function git_oid_is_zero is available
+Configure miss: whether the libgit2 function git_oid_is_zero is available
