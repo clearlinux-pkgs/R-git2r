@@ -4,7 +4,7 @@
 #
 Name     : R-git2r
 Version  : 0.28.0
-Release  : 92
+Release  : 93
 URL      : https://cran.r-project.org/src/contrib/git2r_0.28.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/git2r_0.28.0.tar.gz
 Summary  : Provides Access to Git Repositories
@@ -46,10 +46,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1610330750
+export SOURCE_DATE_EPOCH=1626705843
 
 %install
-export SOURCE_DATE_EPOCH=1610330750
+export SOURCE_DATE_EPOCH=1626705843
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -169,3 +169,4 @@ R CMD check --no-manual --no-examples --no-codoc git2r || :
 %defattr(-,root,root,-)
 /usr/lib64/R/library/git2r/libs/git2r.so
 /usr/lib64/R/library/git2r/libs/git2r.so.avx2
+/usr/lib64/R/library/git2r/libs/git2r.so.avx512
