@@ -4,7 +4,7 @@
 #
 Name     : R-git2r
 Version  : 0.30.1
-Release  : 102
+Release  : 103
 URL      : https://cran.r-project.org/src/contrib/git2r_0.30.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/git2r_0.30.1.tar.gz
 Summary  : Provides Access to Git Repositories
@@ -46,10 +46,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1647449283
+export SOURCE_DATE_EPOCH=1649980675
 
 %install
-export SOURCE_DATE_EPOCH=1647449283
+export SOURCE_DATE_EPOCH=1649980675
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
